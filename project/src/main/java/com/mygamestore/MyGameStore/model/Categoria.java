@@ -21,9 +21,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Categoria {
 	
 	//id
-	//categoria
-	//descrição
-	//forma_pagamento
+	//categoriaProduto
+	//descricao
+	//formaPagamento
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
