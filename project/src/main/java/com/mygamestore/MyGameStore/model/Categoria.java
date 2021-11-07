@@ -41,7 +41,7 @@ public class Categoria {
 	@Size(min = 5, max = 100)
 	private String formaPagamento;
 	
-	@OneToMany(mappedBy= "categoria", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy= "categoria", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
 	private List<Categoria> categoria;
 

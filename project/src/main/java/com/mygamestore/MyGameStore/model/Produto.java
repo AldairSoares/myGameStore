@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -37,7 +38,7 @@ public class Produto {
 	
 	@NotNull
 	@Size(min = 1, max = 100)
-	private long estoque;
+	private int estoque;
 	
 	
 	@Size(min = 1, max = 100)
@@ -45,6 +46,7 @@ public class Produto {
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
+	@JoinColumn(name = "fk_categoria")
 	private Categoria categoria;
 
 	public long getId() {
@@ -71,11 +73,11 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public long getEstoque() {
+	public int getEstoque() {
 		return estoque;
 	}
 
-	public void setEstoque(long estoque) {
+	public void setEstoque(int estoque) {
 		this.estoque = estoque;
 	}
 
