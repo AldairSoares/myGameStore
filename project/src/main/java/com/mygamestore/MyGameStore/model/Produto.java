@@ -37,11 +37,8 @@ public class Produto {
 	private String descricao;
 	
 	@NotNull
-	@Size(min = 1, max = 100)
-	private int estoque;
+	private double estoque;
 	
-	
-	@Size(min = 1, max = 100)
 	private double valor;
 	
 	@ManyToOne
@@ -73,11 +70,11 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public int getEstoque() {
+	public double getEstoque() {
 		return estoque;
 	}
 
-	public void setEstoque(int estoque) {
+	public void setEstoque(double estoque) {
 		this.estoque = estoque;
 	}
 
@@ -96,6 +93,7 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
 	
 	
 	
