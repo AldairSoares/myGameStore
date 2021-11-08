@@ -1,5 +1,6 @@
 package com.mygamestore.MyGameStore.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -43,7 +44,7 @@ public class Categoria {
 	
 	@OneToMany(mappedBy= "categoria", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
-	private List<Categoria> categoria;
+	private List<Produto> produtos = new ArrayList<>();
 
 	public long getId() {
 		return id;
@@ -77,13 +78,15 @@ public class Categoria {
 		this.formaPagamento = formaPagamento;
 	}
 
-	public List<Categoria> getCategoria() {
-		return categoria;
+	public List<Produto> getProdutos() {
+		return produtos;
 	}
 
-	public void setCategoria(List<Categoria> categoria) {
-		this.categoria = categoria;
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
 	}
+
+	
 
 	
 	
