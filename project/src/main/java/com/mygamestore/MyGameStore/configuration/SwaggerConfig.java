@@ -42,16 +42,16 @@ public class SwaggerConfig {
 			.description("Projeto API Spring - My Game Store")
 			.version("1.0.0")
 			.license("Apache License Version 2.0")
-			.licenseUrl("https://github.com/educastroo")
+			.licenseUrl("https://github.com/BrendaStefany")
 			.contact(contact())
 			.build();
 	}
 
 	private static Contact contact() {
 
-		return new Contact("Eduardo Castro", 
-			"https://github.com/educastroo", 
-			"educastrodev@gmail.com");
+		return new Contact("Brenda Stefany", 
+			"https://github.com/BrendaStefany", 
+			"brenda.stefany.cavalcanti@gmail.com");
 
 	}
 
